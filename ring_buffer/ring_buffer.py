@@ -1,9 +1,12 @@
+import collections
 class RingBuffer:
     def __init__(self, capacity):
-        pass
+        self.capacity = capacity
+        self.storage = collections.deque(maxlen=capacity)
+
 
     def append(self, item):
-        pass
+        self.storage.append(item)
 
     def get(self):
-        pass
+        return self.storage[0]
