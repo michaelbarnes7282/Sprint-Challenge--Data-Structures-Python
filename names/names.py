@@ -23,6 +23,17 @@ for name in names_2:
     if name1.contains(name):
         duplicates.append(name)
 
+# stretch code, less efficient but ran at ~ 1 second, 5 seconds faster than original code
+# for name_1 in names_1:
+#     if name_1 in names_2:
+#         duplicates.append(name)
+
+# starter code, takes a little over 6 seconds to execute
+# for name_1 in names_1:
+#     for name_2 in names_2:
+#         if name_1 == name_2:
+#             duplicates.append(name_1)
+
 end_time = time.time()
 print (f"{len(duplicates)} duplicates:\n\n{', '.join(duplicates)}\n\n")
 print (f"runtime: {end_time - start_time} seconds")
